@@ -10,13 +10,6 @@ __credits__     = ["Matthew Thornton"]
 __version__     = "2.0"
 __maintainer__  = "Matthew Thornton"
 
-"""
-Todo:
-* Implement force system
-    - Force one way or the other. Ignore those that are already 
-        encrypted or decrypted
-* Implement ability to do files without the full path
-"""
 import os, sys
 import encodewalkFunctions
 
