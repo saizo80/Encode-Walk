@@ -252,7 +252,8 @@ class encodewalk():
         
         Returns: None
         """
-        
+        # no need to check for force if just processing one file
+
         filePathTemp = filePath.split('/')
         filename = filePathTemp[len(filePathTemp) - 1]
         if '.binff' in filename:
@@ -286,6 +287,7 @@ class encodewalk():
                     else:
                         self.__decrypt(os.path.join(root, filename), verbose)
                 break
+            # encrypt/decrypt the folder name as well
             if walk_dir[-3:] == 'fff':
                 self.__encryptFolder(walk_dir, verbose, False)
             else:
