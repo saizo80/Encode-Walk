@@ -14,6 +14,7 @@ import os, sys
 import encodewalkFunctions
 
 def main():
+    # create the encoder object
     encode = encodewalkFunctions.encodewalk()
     counter = 0
     walk_dir = None
@@ -36,7 +37,9 @@ def main():
     if walk_dir is None:
         walk_dir = input("Enter the directory or file to walk: ")  
         walk_dir = walk_dir.replace("\\", "")  
-        
+    
+    # remove trailing empty space in file path
+    # (problem for macos)
     while walk_dir[-1] == " ":
         walk_dir = walk_dir[:-1]
     if verbose:
